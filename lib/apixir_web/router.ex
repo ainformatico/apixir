@@ -5,6 +5,10 @@ defmodule ApixirWeb.Router do
     plug :accepts, ["json"]
   end
 
+  scope "/", ApixirWeb do
+    resources "/", PageController, only: [:index]
+  end
+
   scope "/api", ApixirWeb do
     pipe_through :api
   end

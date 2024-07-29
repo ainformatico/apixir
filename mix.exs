@@ -19,7 +19,7 @@ defmodule Apixir.MixProject do
   def application do
     [
       mod: {Apixir.Application, []},
-      extra_applications: [:logger, :runtime_tools, :faker]
+      extra_applications: [:logger, :runtime_tools, :faker, :plug_attack]
     ]
   end
 
@@ -38,7 +38,8 @@ defmodule Apixir.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.5"},
-      {:faker, "~> 0.18"}
+      {:faker, "~> 0.18"},
+      {:plug_attack, "~> 0.4.3"}
     ]
   end
 

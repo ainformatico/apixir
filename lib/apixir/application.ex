@@ -14,7 +14,10 @@ defmodule Apixir.Application do
       # Start a worker by calling: Apixir.Worker.start_link(arg)
       # {Apixir.Worker, arg},
       # Start to serve requests, typically the last entry
-      ApixirWeb.Endpoint
+      ApixirWeb.Endpoint,
+      {PlugAttack.Storage.Ets,
+       name: Apixir.Plugs.PlugAttack.Storage,
+       clean_period: Application.get_env(:apixir, :rate_limit_window)}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

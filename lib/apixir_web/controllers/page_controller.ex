@@ -4,4 +4,8 @@ defmodule ApixirWeb.PageController do
   def index(conn, _params) do
     render(conn, "index.json", message: "Welcome to Phoenix!")
   end
+
+  def show(conn, %{"id" => id}) do
+    render(conn, "show.json", id: id)
+  end
 end

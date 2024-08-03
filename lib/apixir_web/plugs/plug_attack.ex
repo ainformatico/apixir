@@ -35,6 +35,7 @@ defmodule Apixir.Plugs.PlugAttack do
 
   def block_action(conn, _data, _opts) do
     conn
+    # We want to intentionally return 403 and not 429
     |> send_resp(:forbidden, "Forbidden\n")
     # It's important to halt connection once we send a response early
     |> halt

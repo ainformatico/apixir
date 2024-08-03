@@ -8,6 +8,6 @@ defmodule ApixirWeb.Router do
   scope "/api", ApixirWeb do
     pipe_through :api
 
-    resources "/", PageController, only: [:index, :show]
+    resources "/profiles", PageController, only: [:index, :show]
   end
 end

@@ -29,6 +29,10 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+config :apixir, :total_entries, 10_000
+config :apixir, :default_limit_per_page, 10
+config :apixir, :max_limit_per_page, 400
+
 config :apixir, :rate_limit_requests, 10
 config :apixir, :rate_limit_window, 60_000
 
